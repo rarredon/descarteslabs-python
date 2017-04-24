@@ -1,4 +1,4 @@
-Welcome to DescartesLabs's platform!
+Welcome to Descartes Labs Platform
 ====================================
 
 .. toctree::

@@ -2,8 +2,7 @@
 
 Quickstart
 ==========
-
-Eager to get started? Getting started with our platform is easy, but requires a few steps.
+Use this guide for directions on installing the API and configuring your setup for proper authentication.
 
 Installation
 ------------

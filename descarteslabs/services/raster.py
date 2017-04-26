@@ -29,7 +29,7 @@ class Raster(Service):
 
     def __init__(
             self,
-            url='https://platform-services.descarteslabs.com/raster/dev',
+            url='https://platform-services-dev.descarteslabs.com/raster/v1',
             token=None
     ):
         """The parent Service class implements authentication and exponential

@@ -22,7 +22,7 @@ class Metadata(Service):
     TIMEOUT = 120
     """Image Metadata Service https://iam.descarteslabs.com/service/runcible"""
 
-    def __init__(self, url='https://platform-services.descarteslabs.com/runcible/dev', token=None):
+    def __init__(self, url='https://platform-services-dev.descarteslabs.com/runcible/v1', token=None):
         """The parent Service class implements authentication and exponential
         backoff/retry. Override the url parameter to use a different instance
         of the backing service.

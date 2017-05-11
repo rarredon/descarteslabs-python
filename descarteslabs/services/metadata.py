@@ -42,7 +42,7 @@ class Metadata(Service):
             >>> from pprint import pprint
             >>> sources = dl.metadata.sources()
             >>> pprint(sources)
-            [{'const_id': 'L8', 'sat_id': 'LANDSAT_8', 'value': 5}]
+            [{'const_id': 'l8', 'sat_id': 'LANDSAT_8', 'value': 89}]
 
         """
         r = self.session.get('%s/sources' % self.url, timeout=self.TIMEOUT)
@@ -72,9 +72,9 @@ class Metadata(Service):
 
             >>> import descarteslabs as dl
             >>> from pprint import  pprint
-            >>> pprint(dl.metadata.summary(place='north-america_united-states_iowa', const_id=['L8'], part='year'))
+            >>> pprint(dl.metadata.summary(place='north-america_united-states_iowa', const_id=['l8'], part='year'))
             {'bytes': 755354655,
-             'const_id': ['L8'],
+             'const_id': ['l8'],
              'count': 6,
              'items': [{'bytes': 93298309,
                 'count': 1,
@@ -173,7 +173,7 @@ class Metadata(Service):
 
             >>> import descarteslabs as dl
             >>> scenes = dl.metadata.search(place='north-america_united-states_iowa', \
-                                         const_id=['L8'], \
+                                         const_id=['l8'], \
                                          start_time='2016-07-01', \
                                          end_time='2016-07-31 23:59:59')
             >>> len(scenes['features'])
@@ -271,7 +271,7 @@ class Metadata(Service):
 
             >>> import descarteslabs as dl
             >>> keys = dl.metadata.keys(place='north-america_united-states_iowa', \
-                                 const_id=['L8'], \
+                                 const_id=['l8'], \
                                  start_time='2016-07-01', \
                                  end_time='2016-07-31 23:59:59')
             >>> len(keys)

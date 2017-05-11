@@ -48,19 +48,19 @@ class TestMetadata(unittest.TestCase):
             self.assertEqual(feature['properties']['cloud_fraction'], 0.0)
 
     def test_const_id(self):
-        r = self.instance.search(start_time='2016-07-06', end_time='2016-07-07', const_id=['L8'])
+        r = self.instance.search(start_time='2016-07-06', end_time='2016-07-07', const_id=['l8'])
         self.assertGreater(len(r['features']), 0)
 
     def test_multiple_const_id(self):
-        r = self.instance.search(start_time='2016-07-06', end_time='2016-07-07', const_id=['L8', 'L7'])
+        r = self.instance.search(start_time='2016-07-06', end_time='2016-07-07', const_id=['l8', 'l7'])
         self.assertGreater(len(r['features']), 0)
 
     def test_place(self):
-        r = self.instance.search(const_id=['L8'], place='north-america_united-states_iowa', limit=1)
+        r = self.instance.search(const_id=['l8'], place='north-america_united-states_iowa', limit=1)
         self.assertEqual(1, len(r['features']))
 
     def test_summary(self):
-        r = self.instance.summary(start_time='2016-07-06', end_time='2016-07-07', const_id=['L8'])
+        r = self.instance.summary(start_time='2016-07-06', end_time='2016-07-07', const_id=['l8'])
         self.assertIn('const_id', r)
         self.assertIn('count', r)
         self.assertIn('pixels', r)
@@ -68,7 +68,7 @@ class TestMetadata(unittest.TestCase):
         self.assertGreater(r['count'], 0)
 
     def test_summary_part(self):
-        r = self.instance.summary(start_time='2016-07-06', end_time='2016-07-07', const_id=['L8'], part='year')
+        r = self.instance.summary(start_time='2016-07-06', end_time='2016-07-07', const_id=['l8'], part='year')
         self.assertIn('const_id', r)
         self.assertIn('count', r)
         self.assertIn('pixels', r)

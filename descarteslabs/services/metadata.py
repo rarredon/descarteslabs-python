@@ -73,18 +73,14 @@ class Metadata(Service):
             >>> import descarteslabs as dl
             >>> from pprint import  pprint
             >>> pprint(dl.metadata.summary(place='north-america_united-states_iowa', const_id=['l8'], part='year'))
-            {'bytes': 755354655,
+            {'bytes': 93298309,
              'const_id': ['l8'],
-             'count': 6,
+             'count': 1,
              'items': [{'bytes': 93298309,
-                'count': 1,
-                'date': '2016-01-01T00:00:00',
-                'pixels': 250508160},
-               {'bytes': 662056346,
-                'count': 5,
-                'date': '2017-01-01T00:00:00',
-                'pixels': 1230729728}],
-             'pixels': 1481237888}
+                        'count': 1,
+                        'date': '2016-01-01T00:00:00',
+                        'pixels': 250508160}],
+             'pixels': 250508160}
         """
         if place:
             places = Places()

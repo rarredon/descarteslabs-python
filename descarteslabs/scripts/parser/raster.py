@@ -14,7 +14,7 @@
 # limitations under the License.
 
 from __future__ import print_function
-import argparse
+from argparse import ArgumentTypeError
 import json
 import descarteslabs as dl
 
@@ -30,9 +30,7 @@ def scales(s):
         else:
             raise
     except:
-        raise argparse.ArgumentTypeError(
-            "Scales must be mi,ma or smi,sma,dmi,dma"
-        )
+        raise ArgumentTypeError('Scales must be mi,ma or smi,sma,dmi,dma')
 
 
 def raster_handler(args):
@@ -47,7 +45,7 @@ def raster_handler(args):
         'place': args.place,
     }
     response = dl.raster.raster(**params)
-    for filename, data in response['files'].iteritems():
-        with open(filename, "w") as f:
+    for filename, data in response['files'].items():
+        with open(filename, "wb") as f:
             f.write(data)
     print(json.dumps(response['metadata'], indent=2))

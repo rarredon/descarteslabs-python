@@ -157,3 +157,7 @@ class TestRaster(unittest.TestCase):
     def test_dlkey(self):
         dlkey_geojson = self.raster.dlkey("2048:16:30.0:16:-4:81")
         self.assertEqual(dlkey_geojson['properties']['key'], "2048:16:30.0:16:-4:81")
+
+
+if __name__ == '__main__':
+    unittest.main()
